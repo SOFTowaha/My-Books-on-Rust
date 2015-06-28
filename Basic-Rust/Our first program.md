@@ -51,14 +51,18 @@ This string was given as argument to the println! macro (the ! indicates it is a
 The code line ends in a semicolon ; as most, but not all, code lines in Rust do (see next chapter).
 
 *Exercises:*   
-1) Write, compile and execute a Rust program name.rs that prints out your name.
-			2) What is the smallest possible program in Rust?
+* 1) Write, compile and execute a Rust program name.rs that prints out your name.
+* 2) What is the smallest possible program in Rust?
+* 
 Here is an alternative version that produces exactly the same output and illustrates how to use a function from an external library or crate as Rust calls them; in this case the println function comes from the module io in the crate std, which is the standard library of Rust:
-// code in Chapter1\code\welcome2.rs
+
+```rust
 use std::io;
 
 fn main() {
 		io::println(""Welcome to the Game!"");	
 }
-(We’'ll come back to crates in Chapter 7).
-The println! macro is preferred over the simple println function, because it has some nice formatting capabilities and at the same time checks when compiling whether the type of variables is correct for the applied formatting (see Chapter 2).
+```
+
+
+The println! macro is preferred over the simple println function, because it has some nice formatting capabilities and at the same time checks when compiling whether the type of variables is correct for the applied formatting .
